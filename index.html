@@ -43,16 +43,22 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:20px 8
 .logo-text{font-size:30px;font-weight:700;color:var(--navy);letter-spacing:1px}
 nav a{text-decoration:none;margin-left:25px;color:var(--navy);font-weight:500}
 
-/* HERO WITH BACKGROUND IMAGE */
+/* HERO WITH BACKGROUND IMAGE - USING LOCAL IMAGE */
 .hero{
 position:relative;
 padding:0;
 min-height:90vh;
 display:flex;
 align-items:center;
-background:url('https://e1.pxfuel.com/desktop-wallpaper/884/678/desktop-wallpaper-fresh-seafood-and-fish-fresh-fish.jpg');
+/* CHANGED: Using local image instead of URL */
+background:url('images/logo.jpeg');
 background-size:cover;
 background-position:center;
+}
+
+/* Fallback in case local image doesn't load */
+.hero.error{
+background:var(--navy);
 }
 
 .hero-overlay{
@@ -274,8 +280,8 @@ color:#666;
 </div>
 </nav>
 
-<!-- HERO SECTION -->
-<section class="hero">
+<!-- HERO SECTION - WITH LOCAL BACKGROUND IMAGE -->
+<section class="hero" id="hero">
 <div class="hero-overlay">
 <div class="hero-content">
 <h1>Fresh Seafood,<br>Your Way</h1>
@@ -307,37 +313,37 @@ color:#666;
 <div class="gallery-grid">
 <!-- ITEM 1: Signature Seafood Boil -->
 <div class="gallery-item">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNBnTafa8O09UWCdV3hyoFF5jDBxLXqqy4Jg&s" alt="Seafood Boil">
+<img src="images/Seafoodboil for one.jpeg" alt="Seafood Boil">
 <div class="caption">Signature Seafood Boil</div>
 </div>
 
 <!-- ITEM 2: Boil for Two -->
 <div class="gallery-item">
-<img src="https://i1.wp.com/forksandfolly.com/wp-content/uploads/2015/07/fried-rice-11.jpg?resize=740%2C672&ssl=1" alt="Boil for Two">
+<img src="images/Seafoodboil for two.jpeg" alt="Boil for Two">
 <div class="caption">Boil for Two</div>
 </div>
 
 <!-- ITEM 3: Seafood Feast -->
 <div class="gallery-item">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIqK9e44gGEUoaDuDLIlueOq1HE0iz_VUa4g&s" alt="Seafood Feast">
+<img src="images/Seafoodboil feast.jpeg" alt="Seafood Feast">
 <div class="caption">Seafood Feast</div>
 </div>
 
 <!-- ITEM 4: Fresh Prawns -->
 <div class="gallery-item">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPgrAvijFLOViDXvZ9uzxE08PILc0Vbb3VdQ&s" alt="Prawns">
+<img src="images/10 Prawns.jpeg" alt="Prawns">
 <div class="caption">Fresh Prawns</div>
 </div>
 
 <!-- ITEM 5: Mussels -->
 <div class="gallery-item">
-<img src="https://www.inspiredtaste.net/wp-content/uploads/2017/01/How-to-Make-Steamed-Mussels-in-White-Wine-Broth.jpg" alt="Mussels">
+<img src="images/10 Muscles.jpeg" alt="Mussels">
 <div class="caption">Mussels</div>
 </div>
 
 <!-- ITEM 6: Fresh Crab -->
 <div class="gallery-item">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRtz6JSTusfenK1CsmyDt4poiSNl6ro6okwg&s" alt="Crab">
+<img src="images/Crab.jpeg" alt="Crab">
 <div class="caption">Fresh Crab</div>
 </div>
 
@@ -374,7 +380,7 @@ color:#666;
 <!-- ITEM 12: Fizz -->
 <div class="gallery-item">
 <img src="images/Blueberry fizz.jpeg" alt="Fizz">
-<div class="caption">BlueberryFizz</div>
+<div class="caption">Blueberry Fizz</div>
 </div>
 </div>
 </section>
@@ -412,7 +418,7 @@ color:#666;
 
 <footer>
 <p>© 2026 Ms Seafood Boil</p> 
-<p>• Same Day Delivery/Pickup in Thembisa 
+<p>• Same Day Delivery/Pickup in Thembisa</p> 
 <p>• Call or WhatsApp 061 186 9463</p> 
 <p>• msseafoodboil151@gmail.com</p>
 <p>Visit: <a href="https://localbusinesswebdesigner.github.io/" style="color: blue; text-decoration: underline;" title="Visit Local Business Web Designer"> Local Business Web Designer</a></p>
@@ -429,6 +435,11 @@ document.querySelector('.logo-img').addEventListener('error', function() {
     this.style.display = 'none';
     document.querySelector('.logo-text').style.display = 'block';
 });
+
+// Optional: Fallback for hero background if image fails to load
+document.getElementById('hero').addEventListener('error', function() {
+    this.classList.add('error');
+}, true); // Use capture to catch image load errors
 </script>
 
 </body>
