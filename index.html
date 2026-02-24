@@ -11,12 +11,14 @@
 <meta property="og:site_name" content="Ms Seafood Boil">
 <meta property="og:title" content="Ms Seafood Boil - Delivery & Pickup Thembisa">
 <meta property="og:description" content="Fresh seafood boils ready for delivery or pickup in Thembisa. Order now!">
-<meta property="og:image" content="https://www.skinnytaste.com/wp-content/uploads/2025/07/Seafood-Boil-10.jpg">
+<!-- Logo in meta property tag - using local image path -->
+<meta property="og:image" content="images/logo.jpeg">
 <meta property="og:url" content="https://msseafoodboil.com">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Ms Seafood Boil">
 <meta name="twitter:description" content="Fresh seafood boils ready for delivery or pickup in Thembisa. Order now!">
-<meta name="twitter:image" content="https://www.skinnytaste.com/wp-content/uploads/2025/07/Seafood-Boil-10.jpg">
+<!-- Logo in twitter meta tag - using local image path -->
+<meta name="twitter:image" content="images/logo.jpeg">
 <title>Ms Seafood Boil | Delivery & Pickup Thembisa</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
@@ -36,7 +38,9 @@ h1,h2,h3{font-family:"Playfair Display",serif}
 section{padding:100px 8%}
 
 nav{display:flex;justify-content:space-between;align-items:center;padding:20px 8%;background:var(--white);box-shadow:0 3px 20px rgba(0,0,0,.05);position:sticky;top:0;z-index:100}
-.logo{font-size:30px;font-weight:700;color:var(--navy);letter-spacing:1px}
+.logo{display:flex;align-items:center;}
+.logo-img{height:50px;width:auto;margin-right:10px;}
+.logo-text{font-size:30px;font-weight:700;color:var(--navy);letter-spacing:1px}
 nav a{text-decoration:none;margin-left:25px;color:var(--navy);font-weight:500}
 
 /* HERO WITH BACKGROUND IMAGE */
@@ -259,7 +263,11 @@ color:#666;
 <body>
 
 <nav>
-<div class="logo">Ms Seafood Boil</div>
+<div class="logo">
+    <!-- Local logo image in navigation -->
+    <img src="images/logo.jpeg" alt="Ms Seafood Boil Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+    <span class="logo-text" style="display: none;">Ms Seafood Boil</span>
+</div>
 <div>
 <a href="#gallery">Gallery</a>
 <a href="#info">Info</a>
@@ -332,6 +340,42 @@ color:#666;
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRtz6JSTusfenK1CsmyDt4poiSNl6ro6okwg&s" alt="Crab">
 <div class="caption">Fresh Crab</div>
 </div>
+
+<!-- ITEM 7: Milkshake -->
+<div class="gallery-item">
+<img src="images/Bubblegum Milkshake.jpeg" alt="Milkshake">
+<div class="caption">Bubblegum Milkshake</div>
+</div>
+
+<!-- ITEM 8: Milkshake -->
+<div class="gallery-item">
+<img src="images/Strawberry Milkshake.jpeg" alt="Milkshake">
+<div class="caption">Strawberry Milkshake</div>
+</div>
+
+<!-- ITEM 9: Milkshake -->
+<div class="gallery-item">
+<img src="images/Chocolate Milkshake.jpeg" alt="Milkshake">
+<div class="caption">Chocolate Milkshake</div>
+</div>
+
+<!-- ITEM 10: Macaroni & Cheese -->
+<div class="gallery-item">
+<img src="images/Macaroni & Cheese.jpeg" alt="Macaroni & Cheese">
+<div class="caption">Macaroni & Cheese</div>
+</div>
+
+<!-- ITEM 11: Fizz -->
+<div class="gallery-item">
+<img src="images/Redberry fizz.jpeg" alt="Fizz">
+<div class="caption">Redberry Fizz</div>
+</div>
+
+<!-- ITEM 12: Fizz -->
+<div class="gallery-item">
+<img src="images/Blueberry fizz.jpeg" alt="Fizz">
+<div class="caption">BlueberryFizz</div>
+</div>
 </div>
 </section>
 
@@ -340,7 +384,7 @@ color:#666;
 <div class="info">
 <div class="info-item">
 <strong>Hours</strong>
-<p>Mon-Sun: 08:00-19:00<br>Fri-Sun: 11am-10pm</p>
+<p>Mon-Sun: 09:00-18:00</p>
 </div>
 <div class="info-item">
 <strong>Location</strong>
@@ -379,7 +423,13 @@ color:#666;
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Order" style="width:36px;height:36px;">
 </a>
 
+<script>
+// Fallback to text logo if image doesn't load
+document.querySelector('.logo-img').addEventListener('error', function() {
+    this.style.display = 'none';
+    document.querySelector('.logo-text').style.display = 'block';
+});
+</script>
+
 </body>
 </html>
-
-

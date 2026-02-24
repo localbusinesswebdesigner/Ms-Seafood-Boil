@@ -16,12 +16,14 @@
 <meta property="og:section" content="Food & Beverage">
 <meta property="og:title" content="Ms Seafood Boil - Pickup Thembisa">
 <meta property="og:description" content="Premium seafood boil boxes crafted with fresh ingredients, bold coastal seasoning - available for pickup in Thembisa.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1600891964599-f61ba0e24092">
+<!-- Local logo image for meta tags -->
+<meta property="og:image" content="images/logo.jpeg">
 <meta property="og:url" content="https://msseafoodboil.com/pickup">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Ms Seafood Boil - Pickup Thembisa">
 <meta name="twitter:description" content="Premium seafood boil boxes crafted with fresh ingredients, bold coastal seasoning - available for pickup in Thembisa.">
-<meta name="twitter:image" content="https://images.unsplash.com/photo-1600891964599-f61ba0e24092">
+<!-- Local logo image for Twitter meta tag -->
+<meta name="twitter:image" content="images/logo.jpeg">
 <meta name="twitter:site" content="@MsSeafoodBoil">
 <meta name="twitter:creator" content="@MsSeafoodBoil">
 <title>Ms Seafood Boil | Pickup Thembisa</title>
@@ -44,7 +46,10 @@ h1,h2,h3{font-family:"Playfair Display",serif}
 section{padding:100px 8%}
 
 nav{display:flex;justify-content:space-between;align-items:center;padding:20px 8%;background:var(--white);box-shadow:0 3px 20px rgba(0,0,0,.05);position:sticky;top:0;z-index:100}
-.logo{font-size:30px;font-weight:700;color:var(--navy);letter-spacing:1px}
+.logo{display:flex;align-items:center;}
+.logo a{display:flex;align-items:center;text-decoration:none;}
+.logo-img{height:50px;width:auto;margin-right:10px;}
+.logo-text{font-size:30px;font-weight:700;color:var(--navy);letter-spacing:1px}
 nav a{text-decoration:none;margin-left:25px;color:var(--navy);font-weight:500}
 
 .hero{display:grid;grid-template-columns:1.2fr 1fr;gap:70px;align-items:center}
@@ -56,9 +61,15 @@ nav a{text-decoration:none;margin-left:25px;color:var(--navy);font-weight:500}
 .gallery img:nth-child(1){grid-row:span 2}
 
 .menu h2,.reviews h2,.about h2{text-align:center;font-size:44px;color:var(--navy);margin-bottom:50px}
-.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:30px}
 
-/* Updated menu card with checkbox */
+/* 2-Column Menu Grid - Responsive */
+.menu-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* Menu card with checkbox */
 .menu-card{
     background:var(--white);
     border-radius:20px;
@@ -66,12 +77,16 @@ nav a{text-decoration:none;margin-left:25px;color:var(--navy);font-weight:500}
     box-shadow:var(--shadow);
     transition:.35s;
     position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 .menu-card:hover{transform:translateY(-10px)}
 .menu-img{
     height:200px;
     overflow:hidden;
     position: relative;
+    flex-shrink: 0;
 }
 .menu-img img{
     width:100%;
@@ -121,7 +136,12 @@ nav a{text-decoration:none;margin-left:25px;color:var(--navy);font-weight:500}
     user-select: none;
 }
 
-.menu-content{padding:22px}
+.menu-content{
+    padding:22px;
+    flex-grow: 1;
+}
+.menu-content h3{font-size:18px;margin-bottom:5px}
+.menu-content p{font-size:14px;color:#666;margin-bottom:10px}
 .price{margin-top:10px;font-weight:600;color:var(--teal)}
 
 /* Selected Items Section */
@@ -339,22 +359,97 @@ nav a{text-decoration:none;margin-left:25px;color:var(--navy);font-weight:500}
 .about{text-align:center}
 .about p{max-width:700px;margin:auto;color:#555;font-size:17px}
 
+/* Contact/Info Bar */
+.info-bar {
+    background: var(--navy);
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.info-item .material-icons {
+    color: var(--teal);
+    font-size: 24px;
+}
+
+.info-item a {
+    color: white;
+    text-decoration: none;
+}
+
+.info-item a:hover {
+    text-decoration: underline;
+    color: var(--teal);
+}
+
+/* Google Maps Container */
+.map-container {
+    padding: 40px 8%;
+    background: var(--light);
+}
+
+.map-container h3 {
+    text-align: center;
+    font-size: 32px;
+    color: var(--navy);
+    margin-bottom: 30px;
+    font-family: "Playfair Display", serif;
+}
+
+.map-frame {
+    width: 100%;
+    height: 400px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
 .contact{position:fixed;bottom:20px;right:20px;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;color:white;text-decoration:none;box-shadow:0 10px 25px rgba(0,0,0,.2);background:#25D366;transition:.3s}
 .contact:hover{transform:scale(1.1)}
 
-footer{padding:60px 8%;text-align:center;color:#666}
+footer{padding:60px 8%;text-align:center;color:#666; background: var(--white); margin-top: 0;}
 
 @media(max-width:900px){
     .hero{grid-template-columns:1fr}.hero h1{font-size:42px}
     .details-form{grid-template-columns:1fr}
     .form-group.full-width{grid-column:span 1}
+    .info-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width:480px){
+    .menu-img{height:180px}
+    .checkbox-container{padding:6px 12px}
+    .checkbox-label{font-size:12px}
 }
 </style>
 </head>
 <body>
 
 <nav>
-<div class="logo">Ms Seafood Boil</div>
+<div class="logo">
+    <a href="index.html">
+        <img src="images/logo.jpeg" alt="Ms Seafood Boil Logo" class="logo-img" onerror="this.style.display='none'; this.parentNode.querySelector('.logo-text').style.display='block';">
+        <span class="logo-text" style="display: none;">Ms Seafood Boil</span>
+    </a>
+</div>
 <div>
 <a href="#about">About</a>
 <a href="#menu">Menu</a>
@@ -378,112 +473,279 @@ footer{padding:60px 8%;text-align:center;color:#666}
 <section class="about" id="about">
 <h2>About Ms Seafood Boil</h2>
 <p>We are a seafood boil kitchen bringing restaurant‑quality seafood to you. Fresh seafood, bold flavour, and premium presentation every time.</p>
-<p>Open Daily: 08:00 - 19:00</p>
 </section>
 
+<!-- Info Bar with Address and Hours -->
+<div class="info-bar">
+    <div class="info-item">
+        <span class="material-icons">location_on</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=311+Naledi+Street+Kgatlamping+Tembisa+1632" target="_blank">
+            <strong>Pickup Address:</strong> 311 Naledi Street, Kgatlamping, Tembisa, 1632
+        </a>
+    </div>
+    <div class="info-item">
+        <span class="material-icons">access_time</span>
+        <span><strong>Hours:</strong> Monday - Sunday: 09:00 - 18:00</span>
+    </div>
+    <div class="info-item">
+        <span class="material-icons">phone</span>
+        <a href="tel:0611869463">061 186 9463</a>
+    </div>
+</div>
+
 <section class="menu" id="menu">
-<h2>Signature Menu</h2>
+<h2>Complete Menu</h2>
 <div class="menu-grid">
 
+<!-- Seafood Boils Category -->
 <div class="menu-card">
     <div class="menu-img">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNBnTafa8O09UWCdV3hyoFF5jDBxLXqqy4Jg&s">
+        <img src="images/Seafoodboil for one.jpeg" alt="Seafood Boil for One">
         <div class="checkbox-container" onclick="event.stopPropagation()">
-            <input type="checkbox" class="item-checkbox" data-name="Ms Seafood Boil" data-price="250" onchange="handleCheckbox(this)">
+            <input type="checkbox" class="item-checkbox" data-name="Seafood Boil for One (5 Prawns, 5 Mussels, 5 Calamari)" data-price="250" onchange="handleCheckbox(this)">
             <span class="checkbox-label">Add order</span>
         </div>
     </div>
     <div class="menu-content">
-        <h3>Ms Seafood Boil</h3>
+        <h3>Seafood Boil for One</h3>
+        <p>5 Prawns, 5 Mussels, 5 Calamari</p>
         <div class="price">R250</div>
     </div>
 </div>
 
 <div class="menu-card">
     <div class="menu-img">
-        <img src="https://i1.wp.com/forksandfolly.com/wp-content/uploads/2015/07/fried-rice-11.jpg?resize=740%2C672&ssl=1">
+        <img src="images/Seafoodboil for two.jpeg" alt="Seafood Boil for Two">
         <div class="checkbox-container" onclick="event.stopPropagation()">
-            <input type="checkbox" class="item-checkbox" data-name="Seafood Boil for Two" data-price="450" onchange="handleCheckbox(this)">
+            <input type="checkbox" class="item-checkbox" data-name="Seafood Boil for Two (10 Prawns, 10 Mussels, 10 Calamari)" data-price="450" onchange="handleCheckbox(this)">
             <span class="checkbox-label">Add order</span>
         </div>
     </div>
     <div class="menu-content">
         <h3>Seafood Boil for Two</h3>
+        <p>10 Prawns, 10 Mussels, 10 Calamari</p>
         <div class="price">R450</div>
     </div>
 </div>
 
 <div class="menu-card">
     <div class="menu-img">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIqK9e44gGEUoaDuDLIlueOq1HE0iz_VUa4g&s">
+        <img src="images/Seafoodboil feast.jpeg" alt="Seafood Boil Feast">
         <div class="checkbox-container" onclick="event.stopPropagation()">
-            <input type="checkbox" class="item-checkbox" data-name="Seafood Boil Feast" data-price="950" onchange="handleCheckbox(this)">
+            <input type="checkbox" class="item-checkbox" data-name="Seafood Boil Feast (15 Prawns, 15 Mussels, 15 Calamari, Crab)" data-price="950" onchange="handleCheckbox(this)">
             <span class="checkbox-label">Add order</span>
         </div>
     </div>
     <div class="menu-content">
         <h3>Seafood Boil Feast</h3>
+        <p>15 Prawns, 15 Mussels, 15 Calamari, Crab</p>
         <div class="price">R950</div>
     </div>
 </div>
 
+<!-- Seafood Only Items -->
 <div class="menu-card">
     <div class="menu-img">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPgrAvijFLOViDXvZ9uzxE08PILc0Vbb3VdQ&s">
+        <img src="images/10 Prawns.jpeg" alt="10 Prawns">
         <div class="checkbox-container" onclick="event.stopPropagation()">
-            <input type="checkbox" class="item-checkbox" data-name="10 Prawns Only" data-price="200" onchange="handleCheckbox(this)">
+            <input type="checkbox" class="item-checkbox" data-name="10 Prawns with creamy garlic sauce" data-price="200" onchange="handleCheckbox(this)">
             <span class="checkbox-label">Add order</span>
         </div>
     </div>
     <div class="menu-content">
         <h3>10 Prawns Only</h3>
+        <p>10 Prawns with creamy garlic sauce</p>
         <div class="price">R200</div>
     </div>
 </div>
 
 <div class="menu-card">
     <div class="menu-img">
-        <img src="https://www.inspiredtaste.net/wp-content/uploads/2017/01/How-to-Make-Steamed-Mussels-in-White-Wine-Broth.jpg">
+        <img src="images/10 Muscles.jpeg" alt="10 Mussels">
         <div class="checkbox-container" onclick="event.stopPropagation()">
-            <input type="checkbox" class="item-checkbox" data-name="10 Mussels Only" data-price="180" onchange="handleCheckbox(this)">
+            <input type="checkbox" class="item-checkbox" data-name="10 Mussels with creamy garlic sauce" data-price="180" onchange="handleCheckbox(this)">
             <span class="checkbox-label">Add order</span>
         </div>
     </div>
     <div class="menu-content">
         <h3>10 Mussels Only</h3>
+        <p>10 Mussels with creamy garlic sauce</p>
         <div class="price">R180</div>
     </div>
 </div>
 
 <div class="menu-card">
     <div class="menu-img">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRtz6JSTusfenK1CsmyDt4poiSNl6ro6okwg&s">
+        <img src="images/Crab.jpeg" alt="Crab Only">
         <div class="checkbox-container" onclick="event.stopPropagation()">
-            <input type="checkbox" class="item-checkbox" data-name="Crab Only" data-price="150" onchange="handleCheckbox(this)">
+            <input type="checkbox" class="item-checkbox" data-name="Crab in hot sauce" data-price="150" onchange="handleCheckbox(this)">
             <span class="checkbox-label">Add order</span>
         </div>
     </div>
     <div class="menu-content">
         <h3>Crab Only</h3>
+        <p>Crab in hot sauce</p>
         <div class="price">R150</div>
+    </div>
+</div>
+
+<!-- Medium Milkshakes - SEPARATED BY FLAVOR -->
+<div class="menu-card">
+    <div class="menu-img">
+        <img src="images/Strawberry Milkshake.jpeg" alt="Medium Strawberry Milkshake">
+        <div class="checkbox-container" onclick="event.stopPropagation()">
+            <input type="checkbox" class="item-checkbox" data-name="Medium Strawberry Milkshake" data-price="40" onchange="handleCheckbox(this)">
+            <span class="checkbox-label">Add order</span>
+        </div>
+    </div>
+    <div class="menu-content">
+        <h3>Medium Strawberry Milkshake</h3>
+        <p>Creamy strawberry milkshake</p>
+        <div class="price">R40</div>
     </div>
 </div>
 
 <div class="menu-card">
     <div class="menu-img">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMt_E22cgLfLyFBDwrY0YjjiZhNkA0XAQCIA&s">
+        <img src="images/Bubblegum Milkshake.jpeg" alt="Medium Bubblegum Milkshake">
         <div class="checkbox-container" onclick="event.stopPropagation()">
-            <input type="checkbox" class="item-checkbox" data-name="Drinks" data-price="20" onchange="handleCheckbox(this)">
+            <input type="checkbox" class="item-checkbox" data-name="Medium Bubblegum Milkshake" data-price="40" onchange="handleCheckbox(this)">
             <span class="checkbox-label">Add order</span>
         </div>
     </div>
     <div class="menu-content">
-        <h3>Drinks</h3>
-        <div class="price">R20 each</div>
+        <h3>Medium Bubblegum Milkshake</h3>
+        <p>Classic bubblegum flavor</p>
+        <div class="price">R40</div>
+    </div>
+</div>
+
+<div class="menu-card">
+    <div class="menu-img">
+        <img src="images/Chocolate Milkshake.jpeg" alt="Medium Chocolate Milkshake">
+        <div class="checkbox-container" onclick="event.stopPropagation()">
+            <input type="checkbox" class="item-checkbox" data-name="Medium Chocolate Milkshake" data-price="40" onchange="handleCheckbox(this)">
+            <span class="checkbox-label">Add order</span>
+        </div>
+    </div>
+    <div class="menu-content">
+        <h3>Medium Chocolate Milkshake</h3>
+        <p>Rich chocolate flavor</p>
+        <div class="price">R40</div>
+    </div>
+</div>
+
+<!-- Large Milkshakes - SEPARATED BY FLAVOR -->
+<div class="menu-card">
+    <div class="menu-img">
+        <img src="images/Strawberry Milkshake.jpeg" alt="Large Strawberry Milkshake">
+        <div class="checkbox-container" onclick="event.stopPropagation()">
+            <input type="checkbox" class="item-checkbox" data-name="Large Strawberry Milkshake" data-price="60" onchange="handleCheckbox(this)">
+            <span class="checkbox-label">Add order</span>
+        </div>
+    </div>
+    <div class="menu-content">
+        <h3>Large Strawberry Milkshake</h3>
+        <p>Creamy strawberry milkshake</p>
+        <div class="price">R60</div>
+    </div>
+</div>
+
+<div class="menu-card">
+    <div class="menu-img">
+        <img src="images/Bubblegum Milkshake.jpeg" alt="Large Bubblegum Milkshake">
+        <div class="checkbox-container" onclick="event.stopPropagation()">
+            <input type="checkbox" class="item-checkbox" data-name="Large Bubblegum Milkshake" data-price="60" onchange="handleCheckbox(this)">
+            <span class="checkbox-label">Add order</span>
+        </div>
+    </div>
+    <div class="menu-content">
+        <h3>Large Bubblegum Milkshake</h3>
+        <p>Classic bubblegum flavor</p>
+        <div class="price">R60</div>
+    </div>
+</div>
+
+<div class="menu-card">
+    <div class="menu-img">
+        <img src="images/Chocolate Milkshake.jpeg" alt="Large Chocolate Milkshake">
+        <div class="checkbox-container" onclick="event.stopPropagation()">
+            <input type="checkbox" class="item-checkbox" data-name="Large Chocolate Milkshake" data-price="60" onchange="handleCheckbox(this)">
+            <span class="checkbox-label">Add order</span>
+        </div>
+    </div>
+    <div class="menu-content">
+        <h3>Large Chocolate Milkshake</h3>
+        <p>Rich chocolate flavor</p>
+        <div class="price">R60</div>
+    </div>
+</div>
+
+<!-- Fizz Drinks -->
+<div class="menu-card">
+    <div class="menu-img">
+        <img src="images/Blueberry fizz.jpeg" alt="Blueberry Fizz">
+        <div class="checkbox-container" onclick="event.stopPropagation()">
+            <input type="checkbox" class="item-checkbox" data-name="Blueberry Fizz Drink" data-price="20" onchange="handleCheckbox(this)">
+            <span class="checkbox-label">Add order</span>
+        </div>
+    </div>
+    <div class="menu-content">
+        <h3>Blueberry Fizz</h3>
+        <p>Refreshing blueberry drink</p>
+        <div class="price">R20</div>
+    </div>
+</div>
+
+<div class="menu-card">
+    <div class="menu-img">
+        <img src="images/Redberry fizz.jpeg" alt="Redberry Fizz">
+        <div class="checkbox-container" onclick="event.stopPropagation()">
+            <input type="checkbox" class="item-checkbox" data-name="Redberry Fizz Drink" data-price="20" onchange="handleCheckbox(this)">
+            <span class="checkbox-label">Add order</span>
+        </div>
+    </div>
+    <div class="menu-content">
+        <h3>Redberry Fizz</h3>
+        <p>Refreshing redberry drink</p>
+        <div class="price">R20</div>
+    </div>
+</div>
+
+<div class="menu-card">
+    <div class="menu-img">
+        <img src="images/Passionfruit fizz.jpeg" alt="Passionfruit Fizz">
+        <div class="checkbox-container" onclick="event.stopPropagation()">
+            <input type="checkbox" class="item-checkbox" data-name="Passionfruit Fizz Drink" data-price="20" onchange="handleCheckbox(this)">
+            <span class="checkbox-label">Add order</span>
+        </div>
+    </div>
+    <div class="menu-content">
+        <h3>Passionfruit Fizz</h3>
+        <p>Refreshing passionfruit drink</p>
+        <div class="price">R20</div>
+    </div>
+</div>
+
+<!-- Mac & Cheese -->
+<div class="menu-card">
+    <div class="menu-img">
+        <img src="images/Macaroni & Cheese.jpeg" alt="Macaroni & Cheese">
+        <div class="checkbox-container" onclick="event.stopPropagation()">
+            <input type="checkbox" class="item-checkbox" data-name="Macaroni & Cheese" data-price="100" onchange="handleCheckbox(this)">
+            <span class="checkbox-label">Add order</span>
+        </div>
+    </div>
+    <div class="menu-content">
+        <h3>Macaroni & Cheese</h3>
+        <p>Creamy, cheesy perfection</p>
+        <div class="price">R100</div>
     </div>
 </div>
 
 </div>
+
+<p style="text-align:center; margin-top:30px; color:#666;">Looking for something else? Message Ms Seafood Boil on WhatsApp</p>
 </section>
 
 <!-- Selected Items Section -->
@@ -514,7 +776,7 @@ footer{padding:60px 8%;text-align:center;color:#666}
         
         <div class="form-group full-width">
             <label for="instructions">Special Instructions (optional)</label>
-            <textarea id="instructions" placeholder="Any special requests?"></textarea>
+            <textarea id="instructions" placeholder="Any special requests? (e.g., extra sauce, etc.)"></textarea>
         </div>
     </div>
     
@@ -532,7 +794,28 @@ footer{padding:60px 8%;text-align:center;color:#666}
 </div>
 </section>
 
-<footer>Fresh Seafood Boil • Pickup in Thembisa • Open Daily 08:00-19:00 • Call or WhatsApp 061 186 9463</footer>
+<!-- Google Maps Section -->
+<div class="map-container">
+    <h3>Find Us Here</h3>
+    <iframe 
+        class="map-frame"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3589.123456789!2d28.226944!3d-25.998611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9566e8b5c12345%3A0x6f8a2d3e4b5c6d7e!2s311%20Naledi%20St%2C%20Kgatlamping%2C%20Tembisa%2C%201632!5e0!3m2!1sen!2sza!4v1234567890" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    <p style="text-align: center; margin-top: 20px;">
+        <a href="https://www.google.com/maps/search/?api=1&query=311+Naledi+Street+Kgatlamping+Tembisa+1632" target="_blank" style="color: var(--teal); text-decoration: none; font-weight: 500;">
+            Click here to open in Google Maps
+        </a>
+    </p>
+</div>
+
+<footer>
+<p>Fresh Seafood Boil • Pickup in Thembisa • Monday - Sunday: 09:00 - 18:00</p>
+<p>Call or WhatsApp 061 186 9463 • msseafoodboil151@gmail.com</p>
+<p><strong>Pickup Address:</strong> 311 Naledi Street, Kgatlamping, Tembisa, 1632</p>
+</footer>
 
 <a class="contact" href="https://wa.me/27611869463?text=Hi%20I%20want%20to%20order%20seafood%20boil%20for%20pickup%20in%20Thembisa" target="_blank">
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Order" style="width:36px;height:36px;">
@@ -684,7 +967,8 @@ function placeOrder() {
     message += `My details:%0A`;
     message += `Name: ${name}%0A`;
     message += `Phone: ${phone}%0A`;
-    message += `Location: Thembisa%0A`;
+    message += `Location: Thembisa (Pickup)%0A`;
+    message += `Pickup Address: 311 Naledi Street, Kgatlamping, Tembisa, 1632%0A`;
     
     if (instructions) {
         message += `Special instructions: ${instructions}%0A`;
@@ -702,6 +986,12 @@ window.handleCheckbox = handleCheckbox;
 window.updateQuantity = updateQuantity;
 window.removeItem = removeItem;
 window.placeOrder = placeOrder;
+
+// Logo fallback
+document.querySelector('.logo-img')?.addEventListener('error', function() {
+    this.style.display = 'none';
+    this.parentNode.querySelector('.logo-text').style.display = 'block';
+});
 </script>
 
 </body>
