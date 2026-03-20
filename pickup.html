@@ -611,6 +611,44 @@ footer{padding:60px 8%;text-align:center;color:#666; background: var(--white); m
 <div class="menu-grid">
 
 <!-- Seafood Boils Category -->
+
+<div class="menu-card">
+    <div class="menu-img">
+        <img src="images/Friday-Special.jpg" alt="Friday Special">
+        <div class="checkbox-container" onclick="event.stopPropagation()">
+            <input type="checkbox" class="item-checkbox"
+                data-name="FRIDAY SPECIAL (Seafood for One + FREE Fizz)"
+                data-price="250"
+                onchange="handleCheckbox(this)">
+            <span class="checkbox-label">Add Special</span>
+        </div>
+    </div>
+
+    
+    <div style="
+        position:absolute;
+        top:10px;
+        left:10px;
+        background:gold;
+        color:black;
+        padding:5px 12px;
+        border-radius:20px;
+        font-size:12px;
+        font-weight:700;">
+        LIMITED
+    </div>
+
+    <div class="menu-content">
+        <h3>🔥🔥 Friday Special🔥🔥</h3>
+        <p>
+            5 Prawns, 5 Mussels, 5 Calamari<br>
+            Served with Potatoes, Corn, Russians & Eggs<br>
+            <strong>+ FREE Fizz Drink</strong>
+        </p>
+        <div class="price">R250</div>
+    </div>
+</div>
+
 <div class="menu-card">
     <div class="menu-img">
         <img src="images/Seafoodboil for one.jpeg" alt="Seafood Boil for One">
@@ -761,6 +799,24 @@ footer{padding:60px 8%;text-align:center;color:#666; background: var(--white); m
         <h3>Large Strawberry Milkshake</h3>
         <p>Creamy strawberry milkshake</p>
         <div class="price">R60</div>
+    </div>
+</div>
+
+<div class="menu-card">
+    <div class="menu-img">
+        <img src="images/Don Pedro (Amarula) Milkshake.jpeg" alt="Don Pedro Marula Milkshake">
+        <div class="checkbox-container" onclick="event.stopPropagation()">
+            <input type="checkbox" class="item-checkbox" 
+                data-name="Don Pedro Marula Milkshake" 
+                data-price="70" 
+                onchange="handleCheckbox(this)">
+            <span class="checkbox-label">Add order</span>
+        </div>
+    </div>
+    <div class="menu-content">
+        <h3>Don Pedro Marula Milkshake</h3>
+        <p>Creamy marula-flavoured dessert milkshake</p>
+        <div class="price">R70</div>
     </div>
 </div>
 
@@ -973,7 +1029,7 @@ footer{padding:60px 8%;text-align:center;color:#666; background: var(--white); m
 <p><strong>Pickup Address:</strong> 311 Naledi Street, Kgatlamping, Tembisa, 1632</p>
 </footer>
 
-<a class="contact" href="https://wa.me/27611869463?text=Hi%20I%20want%20to%20order%20seafood%20boil%20for%20pickup%20in%20Thembisa" target="_blank">
+<a class="contact" href="https://wa.me/2794863115?text=Hi%20I%20want%20to%20order%20seafood%20boil%20for%20pickup%20in%20Thembisa" target="_blank">
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Order" style="width:36px;height:36px;">
 </a>
 
@@ -1134,7 +1190,7 @@ function placeOrder() {
     
     // Open WhatsApp
     const encodedMessage = encodeURIComponent(message.replace(/%0A/g, '\n')).replace(/%0A/g, '%0A');
-    window.open(`https://wa.me/27611869463?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/2794863115?text=${encodedMessage}`, '_blank');
 }
 
 // Make functions global
@@ -1153,4 +1209,3 @@ document.querySelector('.logo-img')?.addEventListener('error', function() {
 </body>
 
 </html>
-

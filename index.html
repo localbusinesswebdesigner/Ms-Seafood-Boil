@@ -634,7 +634,7 @@ footer{padding:60px 8%;text-align:center;color:#666; background: var(--white); m
     </div>
     <div class="info-item">
         <span class="material-icons">phone</span>
-        <a href="tel:0611869463">061 186 9463</a>
+        <a href="tel:0611869463">0794863115</a>
     </div>
 </div>
 
@@ -651,6 +651,44 @@ footer{padding:60px 8%;text-align:center;color:#666; background: var(--white); m
 <div class="menu-grid">
 
 <!-- Seafood Boils Category -->
+
+<div class="menu-card">
+    <div class="menu-img">
+        <img src="images/Friday-Special.jpg" alt="Friday Special">
+        <div class="checkbox-container" onclick="event.stopPropagation()">
+            <input type="checkbox" class="item-checkbox"
+                data-name="FRIDAY SPECIAL (Seafood for One + FREE Fizz)"
+                data-price="250"
+                onchange="handleCheckbox(this)">
+            <span class="checkbox-label">Add Special</span>
+        </div>
+    </div>
+
+    
+    <div style="
+        position:absolute;
+        top:10px;
+        left:10px;
+        background:gold;
+        color:black;
+        padding:5px 12px;
+        border-radius:20px;
+        font-size:12px;
+        font-weight:700;">
+        LIMITED
+    </div>
+
+    <div class="menu-content">
+        <h3>🔥🔥 Friday Special🔥🔥</h3>
+        <p>
+            5 Prawns, 5 Mussels, 5 Calamari<br>
+            Served with Potatoes, Corn, Russians & Eggs<br>
+            <strong>+ FREE Fizz Drink</strong>
+        </p>
+        <div class="price">R250</div>
+    </div>
+</div>
+
 <div class="menu-card">
     <div class="menu-img">
         <img src="images/Seafoodboil for one.jpeg" alt="Seafood Boil for One">
@@ -816,6 +854,24 @@ footer{padding:60px 8%;text-align:center;color:#666; background: var(--white); m
         <h3>Large Bubblegum Milkshake</h3>
         <p>Classic bubblegum flavor</p>
         <div class="price">R60</div>
+    </div>
+</div>
+
+<div class="menu-card">
+    <div class="menu-img">
+        <img src="images/Don Pedro (Amarula) Milkshake.jpeg" alt="Don Pedro Marula Milkshake">
+        <div class="checkbox-container" onclick="event.stopPropagation()">
+            <input type="checkbox" class="item-checkbox" 
+                data-name="Don Pedro Marula Milkshake" 
+                data-price="70" 
+                onchange="handleCheckbox(this)">
+            <span class="checkbox-label">Add order</span>
+        </div>
+    </div>
+    <div class="menu-content">
+        <h3>Don Pedro Marula Milkshake</h3>
+        <p>Creamy marula-flavoured dessert milkshake</p>
+        <div class="price">R70</div>
     </div>
 </div>
 
@@ -1014,11 +1070,11 @@ footer{padding:60px 8%;text-align:center;color:#666; background: var(--white); m
 
 <footer>
 <p>Fresh Seafood Boil • Pickup & Delivery in Thembisa • Monday - Sunday: 09:00 - 18:00</p>
-<p>Call or WhatsApp 061 186 9463 • msseafoodboil151@gmail.com</p>
+<p>Call or WhatsApp 0794863115 • msseafoodboil151@gmail.com</p>
 <p><strong>Pickup Address:</strong> 311 Naledi Street, Kgatlamping, Tembisa, 1632</p>
 </footer>
 
-<a class="contact" href="https://wa.me/27611869463?text=Hi%20I%20want%20to%20order%20seafood%20boil%20in%20Thembisa" target="_blank">
+<a class="contact" href="https://wa.me/27794863115?text=Hi%20I%20want%20to%20order%20seafood%20boil%20in%20Thembisa" target="_blank">
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Order" style="width:36px;height:36px;">
 </a>
 
@@ -1056,6 +1112,17 @@ function setOrderType(type) {
         if (locationInput) locationInput.required = true;
     }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    setOrderType('pickup');
+
+    const today = new Date().getDay(); // 5 = Friday
+    const specialCard = document.querySelector('[data-name="FRIDAY SPECIAL (Seafood for One + FREE Fizz)"]')?.closest('.menu-card');
+
+    if (specialCard && today !== 5) {
+        specialCard.style.display = 'none';
+    }
+});
 
 // On page load, ensure pickup is active and location hidden
 document.addEventListener('DOMContentLoaded', function() {
@@ -1235,7 +1302,7 @@ function placeOrder() {
     
     // Open WhatsApp
     const encodedMessage = encodeURIComponent(message.replace(/%0A/g, '\n')).replace(/%0A/g, '%0A');
-    window.open(`https://wa.me/27611869463?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/0794863115?text=${encodedMessage}`, '_blank');
 }
 
 // Make functions global
