@@ -634,7 +634,7 @@ footer{padding:60px 8%;text-align:center;color:#666; background: var(--white); m
     </div>
     <div class="info-item">
         <span class="material-icons">phone</span>
-        <a href="tel:0611869463">0794863115</a>
+        <a href="tel:0794863115">0794863115</a>
     </div>
 </div>
 
@@ -1268,43 +1268,53 @@ function placeOrder() {
         return;
     }
     
+
+
+
+
+    /////
+    // Build order message header
     // Build order message header
     let orderTypeDisplay = currentOrderType === 'pickup' ? 'PICKUP' : 'DELIVERY';
-    let message = `Hello Ms Seafood Boil, I'd like to place a ${orderTypeDisplay} order:%0A%0A`;
-    
+
+    let message = `Hello Ms Seafood Boil, I'd like to place a ${orderTypeDisplay} order:\n\n`;
+
     // Add items
     selectedItems.forEach((item, index) => {
-        message += `${index + 1}. ${item.name} x${item.quantity} = R${item.price * item.quantity}%0A`;
+        if(item.name.includes("FRIDAY SPECIAL")){
+            message += `🔥 ${index + 1}. ${item.name} x${item.quantity} = R${item.price * item.quantity}\n`;
+        } else {
+            message += `${index + 1}. ${item.name} x${item.quantity} = R${item.price * item.quantity}\n`;
+        }
     });
-    
-    const total = selectedItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-    message += `%0ATotal: R${total}%0A%0A`;
-    
-    // Add customer details with dynamic location note for delivery
-    message += `My details:%0A`;
-    message += `Name: ${name}%0A`;
-    message += `Phone: ${phone}%0A`;
-    
-    if (currentOrderType === 'pickup') {
-        message += `Location: Thembisa (Pickup at 311 Naledi Street)%0A`;
-    } else {
-        // For delivery, ask user to provide their location
-        message += ` DELIVERY LOCATION: ${location}%0A`;
-        // Additional prompt to confirm area (as per request: "when they click delivery the whatsapp message must suggest they give their location")
-        message += `(Please confirm if this address is in Thembisa for delivery)%0A`;
-    }
-    
-    if (instructions) {
-        message += `Special instructions: ${instructions}%0A`;
-    }
-    
-    message += `%0AThank you! Please confirm my ${orderTypeDisplay} order.`;
-    
-    // Open WhatsApp
-    const encodedMessage = encodeURIComponent(message.replace(/%0A/g, '\n')).replace(/%0A/g, '%0A');
-    window.open(`https://wa.me/0794863115?text=${encodedMessage}`, '_blank');
-}
 
+    // Calculate total
+    const total = selectedItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    message += `\nTotal: R${total}\n\n`;
+
+    // Customer details
+    message += `My details:\n`;
+    message += `Name: ${name}\n`;
+    message += `Phone: ${phone}\n`;
+
+    if (currentOrderType === 'pickup') {
+        message += `Location: Thembisa (Pickup at 311 Naledi Street)\n`;
+    } else {
+        message += `DELIVERY LOCATION: ${location}\n`;
+        message += `(Please confirm if this address is in Thembisa for delivery)\n`;
+    }
+
+    if (instructions) {
+        message += `Special instructions: ${instructions}\n`;
+    }
+
+    message += `\nThank you! Please confirm my ${orderTypeDisplay} order.`;
+
+    // Open WhatsApp
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/27794863115?text=${encodedMessage}`, '_blank');
+    
+}
 // Make functions global
 window.handleCheckbox = handleCheckbox;
 window.updateQuantity = updateQuantity;
