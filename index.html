@@ -652,7 +652,7 @@ footer{padding:60px 8%;text-align:center;color:#666; background: var(--white); m
 
 <!-- Seafood Boils Category -->
 
-<div class="menu-card">
+<div class="menu-card friday-special" style="border: 3px solid gold;">
     <div class="menu-img">
         <img src="images/Friday-Special.jpg" alt="Friday Special">
         <div class="checkbox-container" onclick="event.stopPropagation()">
@@ -679,6 +679,15 @@ footer{padding:60px 8%;text-align:center;color:#666; background: var(--white); m
     </div>
 
     <div class="menu-content">
+
+        <div id="countdown" style="
+            margin-top:10px;
+            font-weight:700;
+            color:red;
+            font-size:14px;">
+            Ends in: --:--:--
+        </div>
+
         <h3>🔥🔥 Friday Special🔥🔥</h3>
         <p>
             5 Prawns, 5 Mussels, 5 Calamari<br>
@@ -1326,6 +1335,46 @@ window.setOrderType = setOrderType;
 document.querySelector('.logo-img')?.addEventListener('error', function() {
     this.style.display = 'none';
     this.parentNode.querySelector('.logo-text').style.display = 'block';
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    const today = new Date();
+    const day = today.getDay(); // 5 = Friday
+
+    const specialCard = document.querySelector('.friday-special');
+    const countdownEl = document.getElementById('countdown');
+
+    // 🚫 Hide if NOT Friday
+    if (day !== 5) {
+        if (specialCard) specialCard.style.display = 'none';
+        return;
+    }
+
+    // ⏰ Countdown to 18:00 (closing time)
+    function updateCountdown() {
+        const now = new Date();
+
+        const end = new Date();
+        end.setHours(19, 0, 0, 0); // 19:00
+
+        const diff = end - now;
+
+        if (diff <= 0) {
+            countdownEl.textContent = "Special ended";
+            if (specialCard) specialCard.style.display = 'none';
+            return;
+        }
+
+        const hours = Math.floor(diff / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        countdownEl.textContent = `Ends in: ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
 });
 </script>
 
