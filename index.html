@@ -16,15 +16,17 @@
 <meta property="og:section" content="Food & Beverage">
 <meta property="og:title" content="Ms Seafood Boil - Pickup & Delivery Thembisa">
 <meta property="og:description" content="Premium seafood boil boxes crafted with fresh ingredients, bold coastal seasoning - available for pickup or delivery in Thembisa.">
+<!-- Local logo image for meta tags -->
 <meta property="og:image" content="images/logo.jpeg">
 <meta property="og:url" content="https://msseafoodboil.com/order">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Ms Seafood Boil - Pickup & Delivery Thembisa">
 <meta name="twitter:description" content="Premium seafood boil boxes crafted with fresh ingredients, bold coastal seasoning - available for pickup or delivery in Thembisa.">
+<!-- Local logo image for Twitter meta tag -->
 <meta name="twitter:image" content="images/logo.jpeg">
 <meta name="twitter:site" content="@MsSeafoodBoil">
 <meta name="twitter:creator" content="@MsSeafoodBoil">
-<title>Ms Seafood Boil | Pickup & Delivery</title>
+<title>Ms Seafood Boil | Pickup & Delivery Thembisa</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -49,86 +51,6 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:20px 8
 .logo-img{height:50px;width:auto;margin-right:10px;}
 .logo-text{font-size:30px;font-weight:700;color:var(--navy);letter-spacing:1px}
 nav a{text-decoration:none;margin-left:25px;color:var(--navy);font-weight:500}
-
-/* ===== BRANCH SELECTOR ===== */
-.branch-selector {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    margin: 30px 8% 10px;
-    flex-wrap: wrap;
-}
-
-.branch-btn {
-    padding: 14px 40px;
-    border: 2px solid #2a5f3a;
-    border-radius: 50px;
-    background: transparent;
-    color: #aaa;
-    font-size: 1.1rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    flex: 1;
-    min-width: 180px;
-    max-width: 280px;
-}
-
-.branch-btn:hover {
-    border-color: #e67e22;
-    color: #fff;
-}
-
-.branch-btn.active {
-    background: #e67e22;
-    border-color: #e67e22;
-    color: #fff;
-    box-shadow: 0 0 30px rgba(230, 126, 34, 0.3);
-}
-
-.branch-btn .badge {
-    display: block;
-    font-size: 0.65rem;
-    font-weight: 400;
-    opacity: 0.8;
-    margin-top: 2px;
-}
-
-/* ===== BOKSBURG BANNER ===== */
-.boksburg-banner {
-    background: linear-gradient(135deg, #e67e22, #d35400);
-    text-align: center;
-    padding: 18px;
-    border-radius: 12px;
-    margin: 10px 8% 20px;
-    display: none;
-    animation: pulse-banner 2s infinite;
-}
-
-.boksburg-banner.show {
-    display: block;
-}
-
-.boksburg-banner h2 {
-    font-size: 2rem;
-    font-weight: 900;
-    letter-spacing: 4px;
-    color: #fff;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-}
-
-.boksburg-banner p {
-    font-size: 1rem;
-    color: #fff;
-    opacity: 0.95;
-}
-
-@keyframes pulse-banner {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.01); }
-}
 
 /* Order type toggle */
 .order-type-toggle {
@@ -256,90 +178,6 @@ nav a{text-decoration:none;margin-left:25px;color:var(--navy);font-weight:500}
 .menu-content p{font-size:14px;color:#666;margin-bottom:10px}
 .price{margin-top:10px;font-weight:600;color:var(--teal)}
 
-/* ===== BOKSBURG MENU ===== */
-.boksburg-menu {
-    display: none;
-}
-
-.boksburg-menu.show {
-    display: grid;
-}
-
-.tembisa-menu {
-    display: grid;
-}
-
-.tembisa-menu.hide {
-    display: none;
-}
-
-/* ===== BOKSBURG ORDER OPTIONS ===== */
-.boksburg-options {
-    background: var(--white);
-    border-radius: 20px;
-    padding: 30px;
-    margin: 20px 8%;
-    box-shadow: var(--shadow);
-    display: none;
-}
-
-.boksburg-options.show {
-    display: block;
-}
-
-.boksburg-options h3 {
-    color: var(--navy);
-    font-size: 24px;
-    margin-bottom: 20px;
-    text-align: center;
-    font-family: "Playfair Display", serif;
-}
-
-.boksburg-options .options-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.boksburg-options .option-group {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.boksburg-options .option-group label {
-    font-weight: 600;
-    color: var(--navy);
-    font-size: 14px;
-}
-
-.boksburg-options .option-group select,
-.boksburg-options .option-group input {
-    padding: 12px 15px;
-    border: 2px solid #e0e0e0;
-    border-radius: 12px;
-    font-size: 16px;
-    font-family: "Inter", sans-serif;
-    transition: 0.3s;
-}
-
-.boksburg-options .option-group select:focus,
-.boksburg-options .option-group input:focus {
-    outline: none;
-    border-color: var(--teal);
-}
-
-.boksburg-options .day-note {
-    text-align: center;
-    color: #e67e22;
-    font-weight: 600;
-    margin-top: 15px;
-    padding: 10px;
-    background: rgba(230, 126, 34, 0.1);
-    border-radius: 10px;
-    grid-column: span 2;
-}
-
 /* Selected Items Section */
 .selected-items-section {
     background: var(--white);
@@ -397,7 +235,7 @@ nav a{text-decoration:none;margin-left:25px;color:var(--navy);font-weight:500}
     color: var(--teal);
     font-weight: 600;
     font-size: 14px;
-    display: none;
+    display: none; /* Hides the "Rxxx each" text */
 }
 
 .selected-item-controls {
@@ -718,7 +556,7 @@ nav a{text-decoration:none;margin-left:25px;color:var(--navy);font-weight:500}
 
 footer{padding:60px 8%;text-align:center;color:#666; background: var(--white); margin-top: 0;}
 
-/* Responsive adjustments */
+/* Responsive adjustments - BUT MENU REMAINS 2 COLUMNS */
 @media(max-width:900px){
     .hero{grid-template-columns:1fr}.hero h1{font-size:42px}
     .details-form{grid-template-columns:1fr}
@@ -735,20 +573,6 @@ footer{padding:60px 8%;text-align:center;color:#666; background: var(--white); m
     }
     .bank-details-section .highlight {
         font-size: 22px;
-    }
-    .boksburg-options .options-grid {
-        grid-template-columns: 1fr;
-    }
-    .boksburg-options .day-note {
-        grid-column: span 1;
-    }
-    .branch-selector {
-        flex-direction: column;
-        align-items: center;
-    }
-    .branch-btn {
-        max-width: 100%;
-        width: 100%;
     }
 }
 
@@ -778,28 +602,10 @@ footer{padding:60px 8%;text-align:center;color:#666; background: var(--white); m
 </div>
 </nav>
 
-<!-- ===== BRANCH SELECTOR ===== -->
-<div class="branch-selector">
-    <button class="branch-btn active" id="tembisaBtn" onclick="switchBranch('tembisa')">
-        📍 Tembisa
-        <span class="badge">Pickup & Delivery</span>
-    </button>
-    <button class="branch-btn" id="boksburgBtn" onclick="switchBranch('boksburg')">
-        📍 Boksburg
-        <span class="badge">NOW OPEN • Pre-orders</span>
-    </button>
-</div>
-
-<!-- ===== BOKSBURG BANNER ===== -->
-<div class="boksburg-banner" id="boksburgBanner">
-    <h2>🔥 NOW IN BOKSBURG 🔥</h2>
-    <p>WE TAKE PRE-ORDERS FOR SEAFOOD BOILS • DELIVERIES & COLLECTIONS</p>
-</div>
-
 <section class="hero">
 <div>
 <h1>Ms Seafood Boils</h1>
-<p id="heroDescription">Premium seafood boil boxes crafted with fresh ingredients, bold coastal seasoning - available for pickup or delivery in Thembisa.</p>
+<p>Premium seafood boil boxes crafted with fresh ingredients, bold coastal seasoning - available for pickup or delivery in Thembisa.</p>
 </div>
 
 <div class="gallery">
@@ -811,28 +617,28 @@ footer{padding:60px 8%;text-align:center;color:#666; background: var(--white); m
 
 <section class="about" id="about">
 <h2>About Ms Seafood Boil</h2>
-<p id="aboutDescription">We are a seafood boil kitchen bringing restaurant‑quality seafood to you. Fresh seafood, bold flavour, and premium presentation every time. Choose pickup or delivery.</p>
+<p>We are a seafood boil kitchen bringing restaurant‑quality seafood to you. Fresh seafood, bold flavour, and premium presentation every time. Choose pickup or delivery.</p>
 </section>
 
-<!-- ===== INFO BAR ===== -->
-<div class="info-bar" id="infoBar">
+<!-- Info Bar with Address and Hours -->
+<div class="info-bar">
     <div class="info-item">
         <span class="material-icons">location_on</span>
-        <a href="#" target="_blank" id="locationLink">
-            <strong id="locationLabel">Pickup Address:</strong> <span id="locationText">311 Naledi Street, Kgatlamping, Tembisa, 1632</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=311+Naledi+Street+Kgatlamping+Tembisa+1632" target="_blank">
+            <strong>Pickup Address:</strong> 311 Naledi Street, Kgatlamping, Tembisa, 1632
         </a>
     </div>
     <div class="info-item">
         <span class="material-icons">access_time</span>
-        <span><strong>Hours:</strong> <span id="hoursText">Monday - Sunday: 09:00 - 18:00</span></span>
+        <span><strong>Hours:</strong> Monday - Sunday: 09:00 - 18:00</span>
     </div>
     <div class="info-item">
         <span class="material-icons">phone</span>
-        <a href="tel:0611869463" id="phoneLink">061 186 9463</a>
+        <a href="tel:0794863115">0794863115</a>
     </div>
 </div>
 
-<!-- ===== ORDER TYPE TOGGLE ===== -->
+<!-- ORDER TYPE TOGGLE added -->
 <div style="margin: 40px 8% 20px;">
     <div class="order-type-toggle" id="orderTypeToggle">
         <button class="order-type-btn active" id="pickupBtn" onclick="setOrderType('pickup')">Pickup</button>
@@ -840,32 +646,11 @@ footer{padding:60px 8%;text-align:center;color:#666; background: var(--white); m
     </div>
 </div>
 
-<!-- ===== BOKSBURG ORDER OPTIONS ===== -->
-<div class="boksburg-options" id="boksburgOptions">
-    <h3>📋 Pre-Order Options</h3>
-    <div class="options-grid">
-        <div class="option-group">
-            <label for="orderDate">Select Date *</label>
-            <input type="date" id="orderDate" min="">
-        </div>
-        <div class="option-group">
-            <label for="orderType">Order Type *</label>
-            <select id="orderTypeSelect">
-                <option value="collection">Collection</option>
-                <option value="delivery">Delivery</option>
-            </select>
-        </div>
-        <div class="day-note">
-            ⚠️ We operate Friday - Sunday only for collections & deliveries
-        </div>
-    </div>
-</div>
-
 <section class="menu" id="menu">
-<h2 id="menuTitle">Complete Menu</h2>
+<h2>Complete Menu</h2>
+<div class="menu-grid">
 
-<!-- ===== TEMBISA MENU ===== -->
-<div class="menu-grid tembisa-menu" id="tembisaMenu">
+<!-- Seafood Boils Category -->
 
 <div class="menu-card friday-special" style="border: 3px solid gold;">
     <div class="menu-img">
@@ -874,18 +659,35 @@ footer{padding:60px 8%;text-align:center;color:#666; background: var(--white); m
             <input type="checkbox" class="item-checkbox"
                 data-name="FRIDAY SPECIAL (Seafood for One + FREE Fizz)"
                 data-price="250"
-                data-branch="tembisa"
                 onchange="handleCheckbox(this)">
             <span class="checkbox-label">Add Special</span>
         </div>
     </div>
-    <div style="position:absolute;top:10px;left:10px;background:gold;color:black;padding:5px 12px;border-radius:20px;font-size:12px;font-weight:700;">
+
+    
+    <div style="
+        position:absolute;
+        top:10px;
+        left:10px;
+        background:gold;
+        color:black;
+        padding:5px 12px;
+        border-radius:20px;
+        font-size:12px;
+        font-weight:700;">
         LIMITED
     </div>
+
     <div class="menu-content">
-        <div id="countdown" style="margin-top:10px;font-weight:700;color:red;font-size:14px;">
+
+        <div id="countdown" style="
+            margin-top:10px;
+            font-weight:700;
+            color:red;
+            font-size:14px;">
             Ends in: --:--:--
         </div>
+
         <h3>🔥🔥 Friday Special🔥🔥</h3>
         <p>
             5 Prawns, 5 Mussels, 5 Calamari<br>
@@ -900,7 +702,7 @@ footer{padding:60px 8%;text-align:center;color:#666; background: var(--white); m
     <div class="menu-img">
         <img src="images/Seafoodboil for one.jpeg" alt="Seafood Boil for One">
         <div class="checkbox-container" onclick="event.stopPropagation()">
-            <input type="checkbox" class="item-checkbox" data-name="Seafood Boil for One (5 Prawns, 5 Mussels, 5 Calamari)" data-price="250" data-branch="tembisa" onchange="handleCheckbox(this)">
+            <input type="checkbox" class="item-checkbox" data-name="Seafood Boil for One (5 Prawns, 5 Mussels, 5 Calamari)" data-price="250" onchange="handleCheckbox(this)">
             <span class="checkbox-label">Add order</span>
         </div>
     </div>
@@ -915,7 +717,7 @@ footer{padding:60px 8%;text-align:center;color:#666; background: var(--white); m
     <div class="menu-img">
         <img src="images/Seafoodboil for two.jpeg" alt="Seafood Boil for Two">
         <div class="checkbox-container" onclick="event.stopPropagation()">
-            <input type="checkbox" class="item-checkbox" data-name="Seafood Boil for Two (10 Prawns, 10 Mussels, 10 Calamari)" data-price="450" data-branch="tembisa" onchange="handleCheckbox(this)">
+            <input type="checkbox" class="item-checkbox" data-name="Seafood Boil for Two (10 Prawns, 10 Mussels, 10 Calamari)" data-price="450" onchange="handleCheckbox(this)">
             <span class="checkbox-label">Add order</span>
         </div>
     </div>
@@ -930,7 +732,7 @@ footer{padding:60px 8%;text-align:center;color:#666; background: var(--white); m
     <div class="menu-img">
         <img src="images/Seafoodboil feast.jpeg" alt="Seafood Boil Feast">
         <div class="checkbox-container" onclick="event.stopPropagation()">
-            <input type="checkbox" class="item-checkbox" data-name="Seafood Boil Feast (15 Prawns, 15 Mussels, 15 Calamari, Crab)" data-price="950" data-branch="tembisa" onchange="handleCheckbox(this)">
+            <input type="checkbox" class="item-checkbox" data-name="Seafood Boil Feast (15 Prawns, 15 Mussels, 15 Calamari, Crab)" data-price="950" onchange="handleCheckbox(this)">
             <span class="checkbox-label">Add order</span>
         </div>
     </div>
@@ -941,11 +743,12 @@ footer{padding:60px 8%;text-align:center;color:#666; background: var(--white); m
     </div>
 </div>
 
+<!-- Seafood Only Items -->
 <div class="menu-card">
     <div class="menu-img">
         <img src="images/10 Prawns.jpeg" alt="10 Prawns">
         <div class="checkbox-container" onclick="event.stopPropagation()">
-            <input type="checkbox" class="item-checkbox" data-name="10 Prawns with creamy garlic sauce" data-price="200" data-branch="tembisa" onchange="handleCheckbox(this)">
+            <input type="checkbox" class="item-checkbox" data-name="10 Prawns with creamy garlic sauce" data-price="200" onchange="handleCheckbox(this)">
             <span class="checkbox-label">Add order</span>
         </div>
     </div>
@@ -960,7 +763,7 @@ footer{padding:60px 8%;text-align:center;color:#666; background: var(--white); m
     <div class="menu-img">
         <img src="images/10 Muscles.jpeg" alt="10 Mussels">
         <div class="checkbox-container" onclick="event.stopPropagation()">
-            <input type="checkbox" class="item-checkbox" data-name="10 Mussels with creamy garlic sauce" data-price="180" data-branch="tembisa" onchange="handleCheckbox(this)">
+            <input type="checkbox" class="item-checkbox" data-name="10 Mussels with creamy garlic sauce" data-price="180" onchange="handleCheckbox(this)">
             <span class="checkbox-label">Add order</span>
         </div>
     </div>
@@ -971,27 +774,27 @@ footer{padding:60px 8%;text-align:center;color:#666; background: var(--white); m
     </div>
 </div>
 
-<!-- CRAB PRICE CHANGED TO R200 -->
 <div class="menu-card">
     <div class="menu-img">
         <img src="images/Crab.jpeg" alt="Crab Only">
         <div class="checkbox-container" onclick="event.stopPropagation()">
-            <input type="checkbox" class="item-checkbox" data-name="Crab in hot sauce" data-price="200" data-branch="tembisa" onchange="handleCheckbox(this)">
+            <input type="checkbox" class="item-checkbox" data-name="Crab in hot sauce" data-price="150" onchange="handleCheckbox(this)">
             <span class="checkbox-label">Add order</span>
         </div>
     </div>
     <div class="menu-content">
         <h3>Crab Only</h3>
         <p>Crab in hot sauce</p>
-        <div class="price">R200</div>
+        <div class="price">R150</div>
     </div>
 </div>
 
+<!-- Medium Milkshakes -->
 <div class="menu-card">
     <div class="menu-img">
         <img src="images/Strawberry Milkshake.jpeg" alt="Medium Strawberry Milkshake">
         <div class="checkbox-container" onclick="event.stopPropagation()">
-            <input type="checkbox" class="item-checkbox" data-name="Medium Strawberry Milkshake" data-price="40" data-branch="tembisa" onchange="handleCheckbox(this)">
+            <input type="checkbox" class="item-checkbox" data-name="Medium Strawberry Milkshake" data-price="40" onchange="handleCheckbox(this)">
             <span class="checkbox-label">Add order</span>
         </div>
     </div>
@@ -1006,7 +809,7 @@ footer{padding:60px 8%;text-align:center;color:#666; background: var(--white); m
     <div class="menu-img">
         <img src="images/Bubblegum Milkshake.jpeg" alt="Medium Bubblegum Milkshake">
         <div class="checkbox-container" onclick="event.stopPropagation()">
-            <input type="checkbox" class="item-checkbox" data-name="Medium Bubblegum Milkshake" data-price="40" data-branch="tembisa" onchange="handleCheckbox(this)">
+            <input type="checkbox" class="item-checkbox" data-name="Medium Bubblegum Milkshake" data-price="40" onchange="handleCheckbox(this)">
             <span class="checkbox-label">Add order</span>
         </div>
     </div>
@@ -1021,7 +824,7 @@ footer{padding:60px 8%;text-align:center;color:#666; background: var(--white); m
     <div class="menu-img">
         <img src="images/Chocolate Milkshake.jpeg" alt="Medium Chocolate Milkshake">
         <div class="checkbox-container" onclick="event.stopPropagation()">
-            <input type="checkbox" class="item-checkbox" data-name="Medium Chocolate Milkshake" data-price="40" data-branch="tembisa" onchange="handleCheckbox(this)">
+            <input type="checkbox" class="item-checkbox" data-name="Medium Chocolate Milkshake" data-price="40" onchange="handleCheckbox(this)">
             <span class="checkbox-label">Add order</span>
         </div>
     </div>
@@ -1032,11 +835,12 @@ footer{padding:60px 8%;text-align:center;color:#666; background: var(--white); m
     </div>
 </div>
 
+<!-- Large Milkshakes -->
 <div class="menu-card">
     <div class="menu-img">
         <img src="images/Strawberry Milkshake.jpeg" alt="Large Strawberry Milkshake">
         <div class="checkbox-container" onclick="event.stopPropagation()">
-            <input type="checkbox" class="item-checkbox" data-name="Large Strawberry Milkshake" data-price="60" data-branch="tembisa" onchange="handleCheckbox(this)">
+            <input type="checkbox" class="item-checkbox" data-name="Large Strawberry Milkshake" data-price="60" onchange="handleCheckbox(this)">
             <span class="checkbox-label">Add order</span>
         </div>
     </div>
@@ -1049,12 +853,26 @@ footer{padding:60px 8%;text-align:center;color:#666; background: var(--white); m
 
 <div class="menu-card">
     <div class="menu-img">
+        <img src="images/Bubblegum Milkshake.jpeg" alt="Large Bubblegum Milkshake">
+        <div class="checkbox-container" onclick="event.stopPropagation()">
+            <input type="checkbox" class="item-checkbox" data-name="Large Bubblegum Milkshake" data-price="60" onchange="handleCheckbox(this)">
+            <span class="checkbox-label">Add order</span>
+        </div>
+    </div>
+    <div class="menu-content">
+        <h3>Large Bubblegum Milkshake</h3>
+        <p>Classic bubblegum flavor</p>
+        <div class="price">R60</div>
+    </div>
+</div>
+
+<div class="menu-card">
+    <div class="menu-img">
         <img src="images/Don Pedro (Amarula) Milkshake.jpeg" alt="Don Pedro Marula Milkshake">
         <div class="checkbox-container" onclick="event.stopPropagation()">
             <input type="checkbox" class="item-checkbox" 
                 data-name="Don Pedro Marula Milkshake" 
                 data-price="70" 
-                data-branch="tembisa"
                 onchange="handleCheckbox(this)">
             <span class="checkbox-label">Add order</span>
         </div>
@@ -1068,24 +886,9 @@ footer{padding:60px 8%;text-align:center;color:#666; background: var(--white); m
 
 <div class="menu-card">
     <div class="menu-img">
-        <img src="images/Bubblegum Milkshake.jpeg" alt="Large Bubblegum Milkshake">
-        <div class="checkbox-container" onclick="event.stopPropagation()">
-            <input type="checkbox" class="item-checkbox" data-name="Large Bubblegum Milkshake" data-price="60" data-branch="tembisa" onchange="handleCheckbox(this)">
-            <span class="checkbox-label">Add order</span>
-        </div>
-    </div>
-    <div class="menu-content">
-        <h3>Large Bubblegum Milkshake</h3>
-        <p>Classic bubblegum flavor</p>
-        <div class="price">R60</div>
-    </div>
-</div>
-
-<div class="menu-card">
-    <div class="menu-img">
         <img src="images/Chocolate Milkshake.jpeg" alt="Large Chocolate Milkshake">
         <div class="checkbox-container" onclick="event.stopPropagation()">
-            <input type="checkbox" class="item-checkbox" data-name="Large Chocolate Milkshake" data-price="60" data-branch="tembisa" onchange="handleCheckbox(this)">
+            <input type="checkbox" class="item-checkbox" data-name="Large Chocolate Milkshake" data-price="60" onchange="handleCheckbox(this)">
             <span class="checkbox-label">Add order</span>
         </div>
     </div>
@@ -1096,11 +899,12 @@ footer{padding:60px 8%;text-align:center;color:#666; background: var(--white); m
     </div>
 </div>
 
+<!-- Fizz Drinks -->
 <div class="menu-card">
     <div class="menu-img">
         <img src="images/Blueberry fizz.jpeg" alt="Blueberry Fizz">
         <div class="checkbox-container" onclick="event.stopPropagation()">
-            <input type="checkbox" class="item-checkbox" data-name="Blueberry Fizz Drink" data-price="20" data-branch="tembisa" onchange="handleCheckbox(this)">
+            <input type="checkbox" class="item-checkbox" data-name="Blueberry Fizz Drink" data-price="20" onchange="handleCheckbox(this)">
             <span class="checkbox-label">Add order</span>
         </div>
     </div>
@@ -1115,7 +919,7 @@ footer{padding:60px 8%;text-align:center;color:#666; background: var(--white); m
     <div class="menu-img">
         <img src="images/Redberry fizz.jpeg" alt="Redberry Fizz">
         <div class="checkbox-container" onclick="event.stopPropagation()">
-            <input type="checkbox" class="item-checkbox" data-name="Redberry Fizz Drink" data-price="20" data-branch="tembisa" onchange="handleCheckbox(this)">
+            <input type="checkbox" class="item-checkbox" data-name="Redberry Fizz Drink" data-price="20" onchange="handleCheckbox(this)">
             <span class="checkbox-label">Add order</span>
         </div>
     </div>
@@ -1130,7 +934,7 @@ footer{padding:60px 8%;text-align:center;color:#666; background: var(--white); m
     <div class="menu-img">
         <img src="images/Passionfruit fizz.jpeg" alt="Passionfruit Fizz">
         <div class="checkbox-container" onclick="event.stopPropagation()">
-            <input type="checkbox" class="item-checkbox" data-name="Passionfruit Fizz Drink" data-price="20" data-branch="tembisa" onchange="handleCheckbox(this)">
+            <input type="checkbox" class="item-checkbox" data-name="Passionfruit Fizz Drink" data-price="20" onchange="handleCheckbox(this)">
             <span class="checkbox-label">Add order</span>
         </div>
     </div>
@@ -1141,11 +945,12 @@ footer{padding:60px 8%;text-align:center;color:#666; background: var(--white); m
     </div>
 </div>
 
+<!-- Mac & Cheese -->
 <div class="menu-card">
     <div class="menu-img">
         <img src="images/Macaroni & Cheese.jpeg" alt="Macaroni & Cheese">
         <div class="checkbox-container" onclick="event.stopPropagation()">
-            <input type="checkbox" class="item-checkbox" data-name="Macaroni & Cheese" data-price="100" data-branch="tembisa" onchange="handleCheckbox(this)">
+            <input type="checkbox" class="item-checkbox" data-name="Macaroni & Cheese" data-price="100" onchange="handleCheckbox(this)">
             <span class="checkbox-label">Add order</span>
         </div>
     </div>
@@ -1158,96 +963,7 @@ footer{padding:60px 8%;text-align:center;color:#666; background: var(--white); m
 
 </div>
 
-<!-- ===== BOKSBURG MENU ===== -->
-<div class="menu-grid boksburg-menu" id="boksburgMenu">
-    <p style="grid-column: span 2; text-align: center; color: #666; font-size: 18px; margin: 20px 0;">
-        🦐 SEAFOOD BOILS SERVED WITH POTATOES, CORN, EGGS & SAUSAGES
-    </p>
-
-    <div class="menu-card">
-        <div class="menu-img">
-            <img src="images/Seafoodboil for one.jpeg" alt="Seafood Boil for One">
-            <div class="checkbox-container" onclick="event.stopPropagation()">
-                <input type="checkbox" class="item-checkbox" data-name="Seafood Boil for One (Boksburg) - 5 Prawns, 5 Mussels, 5 Calamari Rings" data-price="250" data-branch="boksburg" onchange="handleCheckbox(this)">
-                <span class="checkbox-label">Add order</span>
-            </div>
-        </div>
-        <div class="menu-content">
-            <h3>Seafood Boil for One</h3>
-            <p>5 Prawns, 5 Mussels, 5 Calamari Rings</p>
-            <div class="price">R250</div>
-        </div>
-    </div>
-
-    <div class="menu-card">
-        <div class="menu-img">
-            <img src="images/Seafoodboil for one.jpeg" alt="Seafood Boil for One 2">
-            <div class="checkbox-container" onclick="event.stopPropagation()">
-                <input type="checkbox" class="item-checkbox" data-name="Seafood Boil for One 2 (Boksburg) - 5 Prawns, 5 Mussels, Calamari Rings + Crab" data-price="400" data-branch="boksburg" onchange="handleCheckbox(this)">
-                <span class="checkbox-label">Add order</span>
-            </div>
-        </div>
-        <div class="menu-content">
-            <h3>Seafood Boil for One 2</h3>
-            <p>5 Prawns, 5 Mussels, Calamari Rings + Crab</p>
-            <div class="price">R400</div>
-        </div>
-    </div>
-
-    <div class="menu-card">
-        <div class="menu-img">
-            <img src="images/Seafoodboil for two.jpeg" alt="Seafood Boil for Two">
-            <div class="checkbox-container" onclick="event.stopPropagation()">
-                <input type="checkbox" class="item-checkbox" data-name="Seafood Boil for Two (Boksburg) - 10 Prawns, 10 Mussels, 10 Calamari Rings" data-price="450" data-branch="boksburg" onchange="handleCheckbox(this)">
-                <span class="checkbox-label">Add order</span>
-            </div>
-        </div>
-        <div class="menu-content">
-            <h3>Seafood Boil for Two</h3>
-            <p>10 Prawns, 10 Mussels, 10 Calamari Rings</p>
-            <div class="price">R450</div>
-        </div>
-    </div>
-
-    <div class="menu-card">
-        <div class="menu-img">
-            <img src="images/Seafoodboil for two.jpeg" alt="Seafood Boil for Two 2">
-            <div class="checkbox-container" onclick="event.stopPropagation()">
-                <input type="checkbox" class="item-checkbox" data-name="Seafood Boil for Two 2 (Boksburg) - 10 Prawns, 10 Mussels, 10 Calamari Rings + 2 Portions of Crab" data-price="650" data-branch="boksburg" onchange="handleCheckbox(this)">
-                <span class="checkbox-label">Add order</span>
-            </div>
-        </div>
-        <div class="menu-content">
-            <h3>Seafood Boil for Two 2</h3>
-            <p>10 Prawns, 10 Mussels, 10 Calamari Rings + 2 Portions of Crab</p>
-            <div class="price">R650</div>
-        </div>
-    </div>
-
-    <div class="menu-card">
-        <div class="menu-img">
-            <img src="images/Seafoodboil feast.jpeg" alt="Seafood Boil Feast">
-            <div class="checkbox-container" onclick="event.stopPropagation()">
-                <input type="checkbox" class="item-checkbox" data-name="Seafood Boil Feast (Boksburg) - 16 Prawns, 16 Mussels, 16 Calamari Rings + 3 Portions of Crab" data-price="1200" data-branch="boksburg" onchange="handleCheckbox(this)">
-                <span class="checkbox-label">Add order</span>
-            </div>
-        </div>
-        <div class="menu-content">
-            <h3>Seafood Boil Feast</h3>
-            <p>16 Prawns, 16 Mussels, 16 Calamari Rings + 3 Portions of Crab</p>
-            <div class="price">R1200</div>
-        </div>
-    </div>
-
-    <p style="grid-column: span 2; text-align: center; color: #666; font-size: 14px; margin: 10px 0;">
-        📞 Place your order via WhatsApp: <strong>079 486 3115</strong>
-    </p>
-    <p style="grid-column: span 2; text-align: center; color: #666; font-size: 14px; margin-bottom: 10px;">
-        📍 Location: Windmill Park, Boksburg
-    </p>
-</div>
-
-<p style="text-align:center; margin-top:30px; color:#666;" id="menuFooter">Looking for something else? Message Ms Seafood Boil on WhatsApp</p>
+<p style="text-align:center; margin-top:30px; color:#666;">Looking for something else? Message Ms Seafood Boil on WhatsApp</p>
 </section>
 
 <!-- Selected Items Section -->
@@ -1292,51 +1008,9 @@ footer{padding:60px 8%;text-align:center;color:#666; background: var(--white); m
     </button>
 </section>
 
-<!-- ===== BANK DETAILS - TEMBISA ===== -->
-<section class="bank-details-section" id="bankDetailsTembisa">
-    <h2>MS<br>SEAFOOD<br>BOIL</h2>
+<!-- BANK DETAILS SECTION -->
+<section class="bank-details-section">
     
-    <div class="highlight">PLEASE PROCEED TO MAKE PAYMENT</div>
-    
-    <div class="important-message">
-        ⚠️ FOR US TO PROCESS ORDER<br>
-        (No e-wallets or cash send)
-    </div>
-    
-    <div class="bank-details-grid">
-        <div class="bank-detail-item">
-            <span class="label">Account Holder</span>
-            <span class="value">Ms Seafood Boil</span>
-        </div>
-        
-        <div class="bank-detail-item">
-            <span class="label">Bank Name</span>
-            <span class="value">TymeBank</span>
-        </div>
-        
-        <div class="bank-detail-item">
-            <span class="label">Branch Code</span>
-            <span class="value">678910</span>
-        </div>
-        
-        <div class="bank-detail-item">
-            <span class="label">Account Number</span>
-            <span class="value">51033747377</span>
-        </div>
-    </div>
-    
-    <div class="reference-note">
-        <span class="label">REFERENCE:</span>
-        <span class="value">YourName & Surname</span>
-    </div>
-    
-    <div class="thank-you-message">
-        THANK YOU FOR YOUR BUSINESS
-    </div>
-</section>
-
-<!-- ===== BANK DETAILS - BOKSBURG ===== -->
-<section class="bank-details-section" id="bankDetailsBoksburg" style="display: none;">
     <h2>MS<br>SEAFOOD<br>BOIL</h2>
     
     <div class="highlight">PLEASE PROCEED TO MAKE PAYMENT</div>
@@ -1399,205 +1073,139 @@ footer{padding:60px 8%;text-align:center;color:#666; background: var(--white); m
         referrerpolicy="no-referrer-when-downgrade">
     </iframe>
     <p style="text-align: center; margin-top: 20px;">
-        <a href="#" target="_blank" style="color: var(--teal); text-decoration: none; font-weight: 500;" id="mapLink">
+        <a href="https://www.google.com/maps/search/?api=1&query=311+Naledi+Street+Kgatlamping+Tembisa+1632" target="_blank" style="color: var(--teal); text-decoration: none; font-weight: 500;">
             Click here to open in Google Maps
         </a>
     </p>
 </div>
 
 <footer>
-<p id="footerText">Fresh Seafood Boil • Pickup & Delivery in Thembisa • Monday - Sunday: 09:00 - 18:00</p>
-<p id="footerPhone">Call or WhatsApp 061 186 9463 • msseafoodboil151@gmail.com</p>
-<p id="footerAddress"><strong>Pickup Address:</strong> 311 Naledi Street, Kgatlamping, Tembisa, 1632</p>
+<p>Fresh Seafood Boil • Pickup & Delivery in Thembisa • Monday - Sunday: 09:00 - 18:00</p>
+<p>Call or WhatsApp 0794863115 • msseafoodboil151@gmail.com</p>
+<p><strong>Pickup Address:</strong> 311 Naledi Street, Kgatlamping, Tembisa, 1632</p>
 </footer>
 
-<a class="contact" id="whatsappFloat" href="https://wa.me/27611869463?text=Hi%20I%20want%20to%20order%20seafood%20boil" target="_blank">
+<a class="contact" href="https://wa.me/27794863115?text=Hi%20I%20want%20to%20order%20seafood%20boil%20in%20Thembisa" target="_blank">
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Order" style="width:36px;height:36px;">
 </a>
 
 <script>
-// ===== GLOBAL VARIABLES =====
-let currentBranch = 'tembisa';
-let currentOrderType = 'pickup';
-let selectedItems = [];
+// Global variable to track order type: 'pickup' or 'delivery'
+let currentOrderType = 'pickup'; // default
 
-// ===== BRANCH SWITCHING =====
-function switchBranch(branch) {
-    currentBranch = branch;
-    
-    // Update buttons
-    document.getElementById('tembisaBtn').classList.toggle('active', branch === 'tembisa');
-    document.getElementById('boksburgBtn').classList.toggle('active', branch === 'boksburg');
-    
-    // Banner
-    document.getElementById('boksburgBanner').classList.toggle('show', branch === 'boksburg');
-    
-    // Boksburg Options
-    document.getElementById('boksburgOptions').classList.toggle('show', branch === 'boksburg');
-    
-    // Menus
-    document.getElementById('tembisaMenu').style.display = branch === 'tembisa' ? 'grid' : 'none';
-    document.getElementById('boksburgMenu').style.display = branch === 'boksburg' ? 'grid' : 'none';
-    
-    // Menu Title
-    document.getElementById('menuTitle').textContent = branch === 'tembisa' ? 'Complete Menu' : 'Boksburg Menu';
-    
-    // Menu Footer
-    document.getElementById('menuFooter').textContent = branch === 'tembisa' 
-        ? 'Looking for something else? Message Ms Seafood Boil on WhatsApp'
-        : '📞 Place your order via WhatsApp: 079 486 3115';
-    
-    // Bank Details
-    document.getElementById('bankDetailsTembisa').style.display = branch === 'tembisa' ? 'block' : 'none';
-    document.getElementById('bankDetailsBoksburg').style.display = branch === 'boksburg' ? 'block' : 'none';
-    
-    // Hero Description
-    document.getElementById('heroDescription').textContent = branch === 'tembisa'
-        ? 'Premium seafood boil boxes crafted with fresh ingredients, bold coastal seasoning - available for pickup or delivery in Thembisa.'
-        : 'NOW IN BOKSBURG! Premium seafood boil boxes crafted with fresh ingredients, bold coastal seasoning - available for pre-order.';
-    
-    // About Description
-    document.getElementById('aboutDescription').textContent = branch === 'tembisa'
-        ? 'We are a seafood boil kitchen bringing restaurant‑quality seafood to you. Fresh seafood, bold flavour, and premium presentation every time. Choose pickup or delivery.'
-        : 'We are a seafood boil kitchen now serving Boksburg! Fresh seafood, bold flavour, and premium presentation every time. Pre-orders available.';
-    
-    // Info Bar
-    if (branch === 'tembisa') {
-        document.getElementById('locationLabel').textContent = 'Pickup Address:';
-        document.getElementById('locationText').textContent = '311 Naledi Street, Kgatlamping, Tembisa, 1632';
-        document.getElementById('locationLink').href = 'https://www.google.com/maps/search/?api=1&query=311+Naledi+Street+Kgatlamping+Tembisa+1632';
-        document.getElementById('hoursText').textContent = 'Monday - Sunday: 09:00 - 18:00';
-        document.getElementById('phoneLink').textContent = '061 186 9463';
-        document.getElementById('phoneLink').href = 'tel:0611869463';
-    } else {
-        document.getElementById('locationLabel').textContent = 'Location:';
-        document.getElementById('locationText').textContent = 'Windmill Park, Boksburg';
-        document.getElementById('locationLink').href = 'https://www.google.com/maps/search/?api=1&query=Windmill+Park+Boksburg';
-        document.getElementById('hoursText').textContent = 'Friday - Sunday: 09:00 - 18:00';
-        document.getElementById('phoneLink').textContent = '079 486 3115';
-        document.getElementById('phoneLink').href = 'tel:0794863115';
-    }
-    
-    // Footer
-    if (branch === 'tembisa') {
-        document.getElementById('footerText').textContent = 'Fresh Seafood Boil • Pickup & Delivery in Thembisa • Monday - Sunday: 09:00 - 18:00';
-        document.getElementById('footerPhone').textContent = 'Call or WhatsApp 061 186 9463 • msseafoodboil151@gmail.com';
-        document.getElementById('footerAddress').innerHTML = '<strong>Pickup Address:</strong> 311 Naledi Street, Kgatlamping, Tembisa, 1632';
-        document.getElementById('mapLink').textContent = 'Click here to open in Google Maps';
-        document.getElementById('mapLink').href = 'https://www.google.com/maps/search/?api=1&query=311+Naledi+Street+Kgatlamping+Tembisa+1632';
-        document.getElementById('whatsappFloat').href = 'https://wa.me/27611869463?text=Hi%20I%20want%20to%20order%20seafood%20boil';
-    } else {
-        document.getElementById('footerText').textContent = 'Fresh Seafood Boil • Pre-orders in Boksburg • Friday - Sunday: 09:00 - 18:00';
-        document.getElementById('footerPhone').textContent = 'Call or WhatsApp 079 486 3115 • msseafoodboil151@gmail.com';
-        document.getElementById('footerAddress').innerHTML = '<strong>Location:</strong> Windmill Park, Boksburg';
-        document.getElementById('mapLink').textContent = '📍 Windmill Park, Boksburg - Open in Google Maps';
-        document.getElementById('mapLink').href = 'https://www.google.com/maps/search/?api=1&query=Windmill+Park+Boksburg';
-        document.getElementById('whatsappFloat').href = 'https://wa.me/27794863115?text=Hi%20I%20want%20to%20order%20seafood%20boil';
-    }
-    
-    // Clear selected items when switching branches
-    selectedItems = [];
-    document.querySelectorAll('.item-checkbox').forEach(cb => cb.checked = false);
-    updateSelectedItemsDisplay();
-    
-    // Reset Boksburg date picker
-    if (branch === 'boksburg') {
-        setDatePickerLimits();
-    }
-}
-
-// ===== BOKSBURG DATE PICKER =====
-function setDatePickerLimits() {
-    const dateInput = document.getElementById('orderDate');
-    const today = new Date();
-    const year = today.getFullYear();
-    const month = String(today.getMonth() + 1).padStart(2, '0');
-    const day = String(today.getDate()).padStart(2, '0');
-    dateInput.min = `${year}-${month}-${day}`;
-    
-    const maxDate = new Date(today);
-    maxDate.setDate(today.getDate() + 30);
-    const maxYear = maxDate.getFullYear();
-    const maxMonth = String(maxDate.getMonth() + 1).padStart(2, '0');
-    const maxDay = String(maxDate.getDate()).padStart(2, '0');
-    dateInput.max = `${maxYear}-${maxMonth}-${maxDay}`;
-}
-
-// ===== ORDER TYPE TOGGLE =====
+// Function to set order type and update UI
 function setOrderType(type) {
     currentOrderType = type;
+    
+    // Update toggle button styles
     const pickupBtn = document.getElementById('pickupBtn');
     const deliveryBtn = document.getElementById('deliveryBtn');
-    const locationGroup = document.getElementById('locationGroup');
     const locationInput = document.getElementById('location');
+    const locationLabel = document.querySelector('label[for="location"]');
+    const locationGroup = document.getElementById('locationGroup');
     
     if (type === 'pickup') {
         pickupBtn.classList.add('active');
         deliveryBtn.classList.remove('active');
-        locationGroup.style.display = 'none';
+        // Hide and disable delivery location field
+        if (locationGroup) {
+            locationGroup.style.display = 'none';
+        }
         if (locationInput) locationInput.required = false;
     } else {
         deliveryBtn.classList.add('active');
         pickupBtn.classList.remove('active');
-        locationGroup.style.display = 'block';
-        locationGroup.classList.add('full-width');
+        // Show and enable delivery location field
+        if (locationGroup) {
+            locationGroup.style.display = 'block';
+            locationGroup.classList.add('full-width');
+        }
         if (locationInput) locationInput.required = true;
     }
 }
 
-// ===== SELECTED ITEMS FUNCTIONS =====
+document.addEventListener('DOMContentLoaded', function() {
+    setOrderType('pickup');
+
+    const today = new Date().getDay(); // 5 = Friday
+    const specialCard = document.querySelector('[data-name="FRIDAY SPECIAL (Seafood for One + FREE Fizz)"]')?.closest('.menu-card');
+
+    if (specialCard && today !== 5) {
+        specialCard.style.display = 'none';
+    }
+});
+
+// On page load, ensure pickup is active and location hidden
+document.addEventListener('DOMContentLoaded', function() {
+    setOrderType('pickup');
+});
+
+// Selected items array
+let selectedItems = [];
+
+// Function to handle checkbox changes
 function handleCheckbox(checkbox) {
     const name = checkbox.getAttribute('data-name');
     const price = parseInt(checkbox.getAttribute('data-price'));
-    const branch = checkbox.getAttribute('data-branch');
-    
-    if (branch !== currentBranch) {
-        checkbox.checked = false;
-        alert(`Please switch to the ${branch === 'tembisa' ? 'Tembisa' : 'Boksburg'} branch to add this item.`);
-        return;
-    }
     
     if (checkbox.checked) {
+        // Add to selected items
         selectedItems.push({
             id: Date.now() + Math.random(),
             name: name,
             price: price,
-            quantity: 1,
-            branch: branch
+            quantity: 1
         });
     } else {
+        // Remove from selected items
         selectedItems = selectedItems.filter(item => item.name !== name);
     }
+    
     updateSelectedItemsDisplay();
 }
 
+// Function to update quantity
 function updateQuantity(id, change) {
     const itemIndex = selectedItems.findIndex(item => item.id == id);
+    
     if (itemIndex !== -1) {
         const newQuantity = selectedItems[itemIndex].quantity + change;
+        
         if (newQuantity <= 0) {
+            // Remove item if quantity becomes 0
             const itemName = selectedItems[itemIndex].name;
             selectedItems.splice(itemIndex, 1);
+            
+            // Uncheck the corresponding checkbox
             const checkbox = document.querySelector(`.item-checkbox[data-name="${itemName}"]`);
             if (checkbox) checkbox.checked = false;
         } else {
             selectedItems[itemIndex].quantity = newQuantity;
         }
+        
         updateSelectedItemsDisplay();
     }
 }
 
+// Function to remove item (called by delete button)
 function removeItem(id) {
     const itemIndex = selectedItems.findIndex(item => item.id == id);
+    
     if (itemIndex !== -1) {
         const itemName = selectedItems[itemIndex].name;
+        
+        // Remove the item
         selectedItems.splice(itemIndex, 1);
+        
+        // Uncheck the corresponding checkbox
         const checkbox = document.querySelector(`.item-checkbox[data-name="${itemName}"]`);
         if (checkbox) checkbox.checked = false;
     }
+    
     updateSelectedItemsDisplay();
 }
 
+// Function to update the display of selected items
 function updateSelectedItemsDisplay() {
     const container = document.getElementById('selectedItemsContainer');
     const totalSpan = document.querySelector('#selectedItemsTotal span:last-child');
@@ -1610,13 +1218,16 @@ function updateSelectedItemsDisplay() {
     
     let total = 0;
     let itemsHtml = '';
+    
     selectedItems.forEach(item => {
         const itemTotal = item.price * item.quantity;
         total += itemTotal;
+        
         itemsHtml += `
             <div class="selected-item" data-id="${item.id}">
                 <div class="selected-item-info">
                     <div class="selected-item-name">${item.name}</div>
+                    <div class="selected-item-price">R${item.price} each</div>
                 </div>
                 <div class="selected-item-controls">
                     ${item.quantity === 1 ? 
@@ -1632,22 +1243,27 @@ function updateSelectedItemsDisplay() {
                         <span class="material-icons">add</span>
                     </button>
                 </div>
-                <div class="selected-item-total">R${itemTotal}</div>
+                <div class="selected-item-total">
+                    R${itemTotal}
+                </div>
             </div>
         `;
     });
+    
     container.innerHTML = itemsHtml;
     totalSpan.textContent = `R${total}`;
 }
 
-// ===== PLACE ORDER =====
+// Function to place order via WhatsApp with dynamic location instruction for delivery
 function placeOrder() {
+    // Get customer details
     const name = document.getElementById('name').value.trim();
     const phone = document.getElementById('phone').value.trim();
     const instructions = document.getElementById('instructions').value.trim();
     const locationInput = document.getElementById('location');
     let location = locationInput ? locationInput.value.trim() : '';
     
+    // Validate based on order type
     if (selectedItems.length === 0) {
         alert('Please tick the "Add order" box on items from the menu');
         return;
@@ -1658,131 +1274,118 @@ function placeOrder() {
         return;
     }
     
-    // Boksburg validation
-    if (currentBranch === 'boksburg') {
-        const orderDate = document.getElementById('orderDate').value;
-        const orderType = document.getElementById('orderTypeSelect').value;
-        
-        if (!orderDate) {
-            alert('Please select a date for your pre-order');
-            return;
-        }
-        
-        const selectedDay = new Date(orderDate).getDay();
-        if (!(selectedDay === 0 || selectedDay === 5 || selectedDay === 6)) {
-            alert('⚠️ We operate Friday - Sunday only. Please select a Friday, Saturday, or Sunday.');
-            return;
-        }
-        
-        if (orderType === 'delivery' && !location) {
-            alert('Please enter your delivery address');
-            return;
-        }
-    }
-    
     if (currentOrderType === 'delivery' && !location) {
-        alert('Please enter your delivery address');
+        alert('Please enter your delivery address/location');
         return;
     }
     
-    // Build message
-    let branchName = currentBranch === 'tembisa' ? 'Tembisa' : 'Boksburg';
+
+
+
+
+    /////
+    // Build order message header
+    // Build order message header
     let orderTypeDisplay = currentOrderType === 'pickup' ? 'PICKUP' : 'DELIVERY';
-    if (currentBranch === 'boksburg') {
-        orderTypeDisplay = 'PRE-ORDER';
-    }
-    
-    let message = `Hello Ms Seafood Boil, I'd like to place a ${orderTypeDisplay} order from the ${branchName} branch:\n\n`;
-    
+
+    let message = `Hello Ms Seafood Boil, I'd like to place a ${orderTypeDisplay} order:\n\n`;
+
+    // Add items
     selectedItems.forEach((item, index) => {
-        message += `${index + 1}. ${item.name} x${item.quantity} = R${item.price * item.quantity}\n`;
+        if(item.name.includes("FRIDAY SPECIAL")){
+            message += `🔥 ${index + 1}. ${item.name} x${item.quantity} = R${item.price * item.quantity}\n`;
+        } else {
+            message += `${index + 1}. ${item.name} x${item.quantity} = R${item.price * item.quantity}\n`;
+        }
     });
-    
+
+    // Calculate total
     const total = selectedItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     message += `\nTotal: R${total}\n\n`;
-    
+
+    // Customer details
     message += `My details:\n`;
     message += `Name: ${name}\n`;
     message += `Phone: ${phone}\n`;
-    
-    if (currentBranch === 'tembisa') {
-        if (currentOrderType === 'pickup') {
-            message += `Location: Thembisa (Pickup at 311 Naledi Street)\n`;
-        } else {
-            message += `DELIVERY LOCATION: ${location}\n`;
-            message += `(Please confirm if this address is in Thembisa for delivery)\n`;
-        }
+
+    if (currentOrderType === 'pickup') {
+        message += `Location: Thembisa (Pickup at 311 Naledi Street)\n`;
     } else {
-        const orderDate = document.getElementById('orderDate').value;
-        const orderType = document.getElementById('orderTypeSelect').value;
-        message += `Branch: Boksburg\n`;
-        message += `Order Date: ${orderDate}\n`;
-        message += `Order Type: ${orderType.toUpperCase()}\n`;
-        if (orderType === 'delivery' && location) {
-            message += `Delivery Address: ${location}\n`;
-        }
+        message += `DELIVERY LOCATION: ${location}\n`;
+        message += `(Please confirm if this address is in Thembisa for delivery)\n`;
     }
-    
+
     if (instructions) {
         message += `Special instructions: ${instructions}\n`;
     }
-    
-    message += `\nThank you! Please confirm my order.`;
-    
+
+    message += `\nThank you! Please confirm my ${orderTypeDisplay} order.`;
+
+    // Open WhatsApp
     const encodedMessage = encodeURIComponent(message);
-    // Use correct WhatsApp number based on branch
-    const whatsappNumber = currentBranch === 'tembisa' ? '27611869463' : '27794863115';
-    window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
-}
-
-// ===== FRIDAY SPECIAL COUNTDOWN =====
-document.addEventListener('DOMContentLoaded', function () {
-    // Set default order type
-    setOrderType('pickup');
+    window.open(`https://wa.me/27794863115?text=${encodedMessage}`, '_blank');
     
-    // Friday special countdown
-    const today = new Date();
-    const day = today.getDay();
-    const specialCard = document.querySelector('.friday-special');
-    const countdownEl = document.getElementById('countdown');
-
-    if (day !== 5) {
-        if (specialCard) specialCard.style.display = 'none';
-    } else {
-        function updateCountdown() {
-            const now = new Date();
-            const end = new Date();
-            end.setHours(19, 0, 0, 0);
-            const diff = end - now;
-            if (diff <= 0) {
-                countdownEl.textContent = "Special ended";
-                if (specialCard) specialCard.style.display = 'none';
-                return;
-            }
-            const hours = Math.floor(diff / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-            countdownEl.textContent = `Ends in: ${hours}h ${minutes}m ${seconds}s`;
-        }
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
-    }
-});
-
-// ===== GLOBAL FUNCTIONS =====
-window.switchBranch = switchBranch;
-window.setOrderType = setOrderType;
+}
+// Make functions global
 window.handleCheckbox = handleCheckbox;
 window.updateQuantity = updateQuantity;
 window.removeItem = removeItem;
 window.placeOrder = placeOrder;
+window.setOrderType = setOrderType;
 
 // Logo fallback
 document.querySelector('.logo-img')?.addEventListener('error', function() {
     this.style.display = 'none';
     this.parentNode.querySelector('.logo-text').style.display = 'block';
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    const today = new Date();
+    const day = today.getDay(); // 5 = Friday
+
+    const specialCard = document.querySelector('.friday-special');
+    const countdownEl = document.getElementById('countdown');
+
+    // 🚫 Hide if NOT Friday
+    if (day !== 5) {
+        if (specialCard) specialCard.style.display = 'none';
+        return;
+    }
+
+    // ⏰ Countdown to 18:00 (closing time)
+    function updateCountdown() {
+        const now = new Date();
+
+        const end = new Date();
+        end.setHours(19, 0, 0, 0); // 19:00
+
+        const diff = end - now;
+
+        if (diff <= 0) {
+            countdownEl.textContent = "Special ended";
+            if (specialCard) specialCard.style.display = 'none';
+            return;
+        }
+
+        const hours = Math.floor(diff / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        countdownEl.textContent = `Ends in: ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+});
 </script>
+
+<!-- Make the main page delivery button link to this page (the pickup/delivery unified page) -->
+<!-- This ensures index.html's delivery button points here -->
+<!-- Also remove any Shopify link remains -->
+<!-- Done: Delivery button in index.html should link to this page (order.html) -->
+<!-- For context: the main index page's delivery button was originally pointing to deliverymanje.com; now it will point to this file (pickup.html originally, now this combined file) -->
+<!-- I'll add a tiny note: but the combined file is already served as "pickup.html" as per request, and index delivery button should point to "pickup.html" which now handles both. -->
 
 </body>
 </html>
